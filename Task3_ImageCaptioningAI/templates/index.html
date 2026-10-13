@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Captioning AI - CodSoft Task 3</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1 class="title">Image Captioning AI</h1>
+            <p class="subtitle">Generate a caption for any image using artificial intelligence.</p>
+        </header>
+
+        <!-- Notification Banner (for warnings or errors) -->
+        <div id="alertBanner" class="alert-banner hidden" role="alert">
+            <span id="alertMessage"></span>
+            <button id="alertCloseBtn" class="alert-close" type="button" aria-label="Close message">&times;</button>
+        </div>
+
+        <!-- Main Card Section -->
+        <main class="main-card">
+            <!-- Hidden file input triggered by custom button -->
+            <input type="file" id="imageInput" accept=".jpg, .jpeg, .png, image/jpeg, image/png" class="file-input-hidden">
+
+            <!-- Upload Controls -->
+            <div class="upload-controls">
+                <button type="button" id="chooseBtn" class="btn btn-secondary">
+                    Choose Image
+                </button>
+                <span id="fileNameDisplay" class="file-name-text">No file chosen</span>
+            </div>
+            <p class="help-text">Supported formats: JPG, JPEG, PNG (Max 10MB)</p>
+
+            <!-- Image Preview Box -->
+            <div id="previewContainer" class="preview-box">
+                <div id="previewPlaceholder" class="preview-placeholder">
+                    <p>Image Preview</p>
+                    <span class="preview-hint">Select an image to see preview here</span>
+                </div>
+                <img id="imagePreview" class="preview-image hidden" alt="Selected image preview">
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-section">
+                <button type="button" id="generateBtn" class="btn btn-primary" disabled>
+                    Generate Caption
+                </button>
+                <button type="button" id="resetBtn" class="btn btn-outline hidden">
+                    Clear Image
+                </button>
+            </div>
+
+            <!-- Loading Indicator -->
+            <div id="loadingIndicator" class="loading-box hidden">
+                <div class="spinner"></div>
+                <p class="loading-text">Processing image and generating caption...</p>
+                <small class="loading-subtext">This may take a few seconds using the pretrained BLIP model.</small>
+            </div>
+
+            <hr class="divider">
+
+            <!-- Caption Output Section -->
+            <section class="output-section">
+                <div class="output-header">
+                    <h2>Generated Caption</h2>
+                    <button type="button" id="copyBtn" class="btn-copy hidden" title="Copy caption to clipboard">
+                        Copy
+                    </button>
+                </div>
+
+                <div id="captionBox" class="caption-display">
+                    <p id="captionText" class="placeholder-text">The generated description appears here.</p>
+                </div>
+                <p id="captionMeta" class="caption-meta hidden"></p>
+            </section>
+        </main>
+
+        <!-- Footer Section -->
+        <footer class="footer">
+            <p>CodSoft AI Internship &bull; Task 3: Image Captioning AI</p>
+            <p id="modelStatusIndicator" class="model-status">Checking model status...</p>
+        </footer>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

@@ -1,6 +1,21 @@
+# Node & Build
 node_modules/
 dist/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+
+# Environment & IDE
 .env
 .env.local
 .DS_Store
 .vscode/
+.idea/
+
+# Local workspace folder
+task_3/

@@ -42,6 +42,32 @@ The AI uses the **Minimax algorithm with Alpha-Beta Pruning** to evaluate possib
 
 ---
 
+### Task 3 - Image Captioning AI
+
+An intelligent web application that generates descriptive, natural-language captions for uploaded images using artificial intelligence.
+
+The AI uses **Salesforce BLIP (Bootstrapping Language-Image Pre-training)** with a Vision Transformer (ViT) encoder and BERT-based cross-attention text decoder.
+
+**Folder:** `Task3_ImageCaptioningAI/`
+
+**Technologies:**
+- Python 3
+- Flask
+- PyTorch
+- Hugging Face Transformers (`Salesforce/blip-image-captioning-base`)
+- Pillow
+- HTML5 / CSS3 / Vanilla JavaScript
+
+**Features:**
+- Real-time client-side image preview
+- Pretrained BLIP captioning model loaded once into memory
+- GPU / Apple Silicon MPS / CPU hardware acceleration
+- Multi-format validation (JPG, JPEG, PNG) & magic byte security checks
+- Clean, responsive single-page user interface
+- 15 automated unit & integration test cases
+
+---
+
 ## Repository Structure
 
 ```text
@@ -50,6 +76,8 @@ CODSOFT_TASKSNO/
 ├── Task1_RuleBasedChatbot/
 │
 ├── Task2_TicTacToeAI/
+│
+├── Task3_ImageCaptioningAI/
 │
 ├── .gitignore
 │
